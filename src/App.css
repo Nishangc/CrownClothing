@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #fb7361;
 }
 
 @keyframes App-logo-spin {
@@ -52,31 +52,29 @@
   justify-content: center;
   border: 1px solid black;
   margin: 0 7.5px 15px;
+}
+.menu-item.large {
+  height: 380px;
+}
 
-  & .large {
-    height: 380px;
-  }
+.menu-item.first-child {
+  margin-right: 7.5px;
+}
 
-  &:first-child {
-    margin-right: 7.5px;
-  }
+.menu-item.last-child {
+  margin-left: 7.5px;
+}
 
-  &:last-child {
-    margin-left: 7.5px;
-  }
+.menu-item.hover {
+  cursor: pointer;
+}
+.menu-item.hover.background-image {
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
 
-  & :hover {
-    cursor: pointer;
-
-    & .background-image {
-      transform: scale(1.1);
-      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
-
-    & .content {
-      opacity: 0.9;
-    }
-  }
+.menu-item.hover.content {
+  opacity: 0.9;
 }
 
 .content {
@@ -91,14 +89,14 @@
   opacity: 0.7;
   position: absolute;
 }
-.title {
+.content.title {
   font-weight: bold;
   margin-bottom: 6px;
   font-size: 22px;
   color: #4a4a4a;
 }
 
-.subtitle {
+.content.subtitle {
   font-weight: lighter;
   font-size: 16px;
 }
@@ -116,4 +114,34 @@
   height: 100%;
   background-position: center;
   background-size: cover;
+}
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.header .logo-container {
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+}
+
+.header .options {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: flex-end;
+}
+.header .options .option {
+  padding: 10px 15px;
+}
+.a {
+  text-decoration: none;
+  color: black;
+}
+* {
+  box-sizing: border-box;
 }
